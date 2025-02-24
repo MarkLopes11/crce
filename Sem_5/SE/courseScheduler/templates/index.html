@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Course Scheduler</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Course Scheduler</h1>
+        {% with messages = get_flashed_messages(with_categories=true) %}
+            {% if messages %}
+                <div>
+                    {% for category, message in messages %}
+                        <p class="{{ category }}">{{ message }}</p>
+                    {% endfor %}
+                </div>
+            {% endif %}
+        {% endwith %}
+
+        <form action="" method="post" enctype="multipart/form-data">
+            <div>
+                <label for="file1">Input File 1:</label>
+                <input type="file" id="file1" name="file1" required>
+            </div>
+            <div>
+                <label for="file2">Input File 2:</label>
+                <input type="file" id="file2" name="file2" required>
+            </div>
+            <button type="submit">Upload and Schedule</button>
+        </form>
+    </div>
+</body>
+</html>

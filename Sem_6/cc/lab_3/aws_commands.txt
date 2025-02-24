@@ -1,0 +1,9 @@
+ssh -i first.pem ubuntu@43.204.233.85
+npm run build
+sudo vim /etc/nginx/sites-available/demo
+sudo ln -s /etc/nginx/sites-available/demo /etc/nginx/sites-enabled
+//(remove if already exists sudo rm /etc/nginx/sites-enabled/demo)
+sudo nginx -t
+sudo service nginx restart
+ cd File-transfer/
+ pm2 start npm --name "File-transfer" -- start

@@ -1,0 +1,8 @@
+rooms
+101 : 25
+115 : 50
+200 : 250 ;
+courses
+cs101, cs102, cs110, cs120, cs220, cs412, cs430, cs612, cs630 ;
+times
+MWF9, MWF10, MWF11, MWF12, TT9, TT10 ;

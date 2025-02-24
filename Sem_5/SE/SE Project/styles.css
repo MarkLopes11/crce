@@ -1,0 +1,93 @@
+/* style.css */
+*{
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-image:url('image.jpg');
+	background-size: cover;
+	background-color: #b0b0b0;
+	font-family: Arial, sans-serif;
+}
+
+.container {
+	background-color: #ffefd0;
+}
+
+h1 {
+	color: #333;
+	text-align: center;
+}
+
+.schedule-table {
+	margin-bottom: 20px;
+}
+
+table {
+	border-collapse: collapse;
+	width: 100%;
+}
+
+th, td {
+	border: 1px solid #ddd;
+	padding: 10px;
+	text-align: left;
+}
+
+th {
+	background-color: #f0f0f0;
+}
+
+td {
+	background-color: #fff;
+}
+
+.btn {
+	background-color: #bce4ff;
+	color: black;
+	padding: 20px 30px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+}
+
+.btn:hover {
+	background-color: #95d5ff;
+}
+
+.days-list, .teachers-list, .subjects-list {
+	margin-top: 20px;
+}
+
+#days-list{
+	display: flex;
+	gap:1rem;
+	li{
+		list-style: none;
+		background-color: #95d5ff;
+		padding: 2rem;
+		border-radius: 5px;
+	}
+}
+
+h2 {
+	margin-bottom: 10px;
+	background-color: #b0b0b0;
+}
+
+ul {
+	list-style: none;
+	padding: 0;
+	margin: 0;
+}
+
+li {
+	padding: 10px;
+	border-bottom: 1px solid #ddd;
+}
+
+li:last-child {
+	border-bottom: none;
+}

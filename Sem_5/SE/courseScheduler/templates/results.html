@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Schedule Results</title>
+    <link rel="stylesheet" href="{{ url_for('static', filename='style.css') }}">
+</head>
+<body>
+    <div class="container">
+        <h1>Scheduling Results</h1>
+
+        {% if errors %}
+            <div class="error">
+                <h2>Errors:</h2>
+                <ul>
+                    {% for error in errors %}
+                        <li>{{ error }}</li>
+                    {% endfor %}
+                </ul>
+            </div>
+        {% endif %}
+
+        <h2>Schedule</h2>
+        <table>
+            <thead>
+                <tr>
+                    <th>Time</th>
+                    {% for room in rooms %}
+                        <th>{{ room }}</th>
+                    {% endfor %}
+                </tr>
+            </thead>
+            <tbody>
+                {% for time, rooms in schedule.items() %}
+                    <tr>
+                        <td>{{ time }}</td>
+                        {% for room in rooms %}
+                            <td>{{ rooms[room] if rooms[room] else '' }}</td>
+                        {% endfor %}
+                    </tr>
+                {% endfor %}
+            </tbody>
+        </table>
+
+        <h2>Unscheduled Courses</h2>
+        <ul>
+            {% for course, reasons in unscheduled_courses.items() %}
+                <li>
+                    <strong>{{ course }}</strong>:
+                    <ul>
+                        {% for reason in reasons %}
+                            <li>{{ reason }}</li>
+                        {% endfor %}
+                    </ul>
+                </li>
+            {% endfor %}
+        </ul>
+    </div>
+</body>
+</html>

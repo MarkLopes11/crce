@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>Schedule Generator</title>
+	<link rel="stylesheet" href="styles.css">
+</head>
+<body>
+	<div class="container">
+		<h1>Schedule Generator</h1>
+		
+		<div class="days-list">
+			<h2>Days:</h2>
+			<ul id="days-list">
+				<li>Monday</li>
+				<li>Tuesday</li>
+				<li>Wednesday</li>
+				<li>Thursday</li>
+				<li>Friday</li>
+			</ul>
+		</div>
+		<div class="teachers-list">
+			<h2>Teachers:</h2>
+			<ul id="teachers-list">
+				<li>Prof.Prasad Lalit/Prof.Unik Lokhande</li>
+				<li>Dr.B.S.Daga</li>
+				<li>Prof.Prajakta Dhamaskar</li>
+				<li>Prof.Sunil Surve</li>
+				<li>Prof.Merly Thomas</li>
+			</ul>
+		</div>
+		<div class="subjects-list">
+			<h2>Subjects:</h2>
+			<ul id="subjects-list">
+				<li>Honours</li>
+				<li>Software Engineering</li>
+				<li>T.C.S</li>
+				<li>PGM</li>
+				<li>Computer Network</li>
+			</ul>
+		</div>
+		<button id="generate-schedule-btn" class="btn">Generate Schedule</button>
+		<div class="schedule-table">
+			<table id="schedule-table">
+				<thead>
+					<tr>
+						<th>Day</th>
+						<th>Time Slot</th>
+						<th>Teacher</th>
+						<th>Subject</th>
+					</tr>
+				</thead>
+				<tbody id="schedule-tbody">
+				</tbody>
+			</table>
+		</div>
+	</div>
+
+	<script src="script.js"></script>
+</body>
+</html>

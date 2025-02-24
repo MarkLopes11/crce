@@ -1,0 +1,24 @@
+Indian Oil
+Indian Oil Bhavan, G-9, 
+Ali Yavar Jung Marg,
+Bandra East, 
+Mumbai,
+Maharashtra, 
+India - 400051
+
+7th March 2024
+
+Dear {{name}},
+
+We are pleased to inform you that your application for the position of {{position}} at Indian Oil has been accepted. You have demonstrated the skills and qualifications necessary for the role, and we are confident that you will make a valuable addition to our team.
+
+Your employment with Indian OIl will begin on {{start_date}}. Please report to the Human Resources department on your first day for orientation and further instructions.
+
+If you have any questions or need additional information, please do not hesitate to contact us at 12345678 or IndianOil@gmail.com.
+
+We look forward to welcoming you aboard and wish you every success in your new role.
+
+Sincerely,
+
+ABC
+HR
