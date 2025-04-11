@@ -1,0 +1,63 @@
+<!-- templates/dashboard.html -->
+{% extends 'base.html' %}
+
+{% block title %}Dashboard - Secure Flask App{% endblock %}
+
+{% block content %}
+<div class="row">
+    <div class="col-md-12">
+        <h1 class="mb-4">Welcome to your Dashboard, {{ session.username }}!</h1>
+    </div>
+</div>
+
+<div class="row">
+    <div class="col-md-4">
+        <div class="card dashboard-card">
+            <div class="card-body">
+                <h5 class="card-title">Profile Information</h5>
+                <p class="card-text">
+                    <strong>Username:</strong> {{ session.username }}<br>
+                    <strong>Account ID:</strong> {{ session.user_id }}
+                </p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Edit Profile</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card dashboard-card">
+            <div class="card-body">
+                <h5 class="card-title">Security Settings</h5>
+                <p class="card-text">Manage your account security settings and password.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">Change Password</a>
+            </div>
+        </div>
+    </div>
+    
+    <div class="col-md-4">
+        <div class="card dashboard-card">
+            <div class="card-body">
+                <h5 class="card-title">Activity Log</h5>
+                <p class="card-text">View your recent account activity and login history.</p>
+                <a href="#" class="btn btn-sm btn-outline-primary">View Activity</a>
+            </div>
+        </div>
+    </div>
+</div>
+
+<div class="row mt-4">
+    <div class="col-md-12">
+        <div class="card dashboard-card">
+            <div class="card-body">
+                <h5 class="card-title">Your Content</h5>
+                <p class="card-text">This is a secure area where your content would be displayed.</p>
+                <p>This dashboard is just a placeholder. In a real application, you would add actual functionality here based on your requirements.</p>
+                <div class="alert alert-info">
+                    <strong>Note:</strong> You're logged in securely with Salt & Pepper password protection!
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+{% endblock %}
+

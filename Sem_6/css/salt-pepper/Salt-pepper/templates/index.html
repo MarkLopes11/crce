@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ title }}</title>
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #4361ee;
+            --secondary-color: #3f37c9;
+            --accent-color: #4895ef;
+            --light-color: #f8f9fa;
+            --dark-color: #212529;
+        }
+        
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background-color: #f0f2f5;
+            color: var(--dark-color);
+        }
+        
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-color) 0%, var(--accent-color) 100%);
+            color: white;
+            border-radius: 1rem;
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1);
+            padding: 3rem;
+            margin-bottom: 2rem;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section::before {
+            content: "";
+            position: absolute;
+            top: -50%;
+            right: -50%;
+            width: 100%;
+            height: 100%;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+        }
+        
+        .card {
+            border: none;
+            border-radius: 1rem;
+            box-shadow: 0 5px 15px rgba(0, 0, 0, 0.05);
+            transition: all 0.3s ease;
+        }
+        
+        .card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn-primary {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-primary:hover {
+            background-color: var(--secondary-color);
+            border-color: var(--secondary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .btn-outline-primary {
+            color: var(--primary-color);
+            border-color: var(--primary-color);
+            border-radius: 0.5rem;
+            padding: 0.75rem 1.5rem;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .btn-outline-primary:hover {
+            background-color: var(--primary-color);
+            border-color: var(--primary-color);
+            transform: translateY(-2px);
+            box-shadow: 0 5px 15px rgba(67, 97, 238, 0.3);
+        }
+        
+        .feature-icon {
+            font-size: 1.5rem;
+            width: 50px;
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            border-radius: 50%;
+            background: var(--light-color);
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+        
+        .feature-card {
+            padding: 1.5rem;
+            border-left: 4px solid var(--primary-color);
+            margin-bottom: 1rem;
+        }
+        
+        .feature-card:hover {
+            background-color: rgba(67, 97, 238, 0.05);
+        }
+        
+        .footer {
+            background-color: var(--light-color);
+            color: var(--dark-color);
+            padding: 2rem 0;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-light bg-white shadow-sm">
+        <div class="container">
+            <a class="navbar-brand" href="{{ url_for('index') }}">
+                <i class="fas fa-shield-alt text-primary me-2"></i>
+                <span class="fw-bold">SecureLock</span>
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active" href="{{ url_for('index') }}">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Features</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Documentation</a>
+                    </li>
+                    {% if 'user_id' in session %}
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('dashboard') }}">Dashboard</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="{{ url_for('logout') }}">Logout</a>
+                        </li>
+                    {% else %}
+                        <li class="nav-item">
+                            <a class="btn btn-primary ms-2" href="{{ url_for('login') }}">Login</a>
+                        </li>
+                    {% endif %}
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container my-5">
+        <div class="hero-section text-center">
+            <h1 class="display-4 fw-bold mb-4">Secure Authentication System</h1>
+            <p class="lead mb-4">Protect your application with enterprise-grade security featuring salt and pepper password hashing</p>
+            
+            {% if 'user_id' in session %}
+                <div class="mt-4">
+                    <p class="fs-5">Welcome back, <strong>{{ session.username }}</strong>!</p>
+                    <a href="{{ url_for('dashboard') }}" class="btn btn-light btn-lg me-2">
+                        <i class="fas fa-tachometer-alt me-2"></i>Go to Dashboard
+                    </a>
+                    <a href="{{ url_for('logout') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-sign-out-alt me-2"></i>Logout
+                    </a>
+                </div>
+            {% else %}
+                <div class="mt-4">
+                    <a href="{{ url_for('register') }}" class="btn btn-light btn-lg me-2">
+                        <i class="fas fa-user-plus me-2"></i>Create Account
+                    </a>
+                    <a href="{{ url_for('login') }}" class="btn btn-outline-light btn-lg">
+                        <i class="fas fa-sign-in-alt me-2"></i>Login
+                    </a>
+                </div>
+            {% endif %}
+        </div>
+
+        <div class="row my-5">
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Why Choose Us?</h3>
+                        <p class="card-text">Our authentication system provides industrial-strength security while maintaining a seamless user experience. Built with modern best practices, our solution offers:</p>
+                        <ul class="list-unstyled mt-4">
+                            <li class="d-flex align-items-center mb-3">
+                                <div class="feature-icon">
+                                    <i class="fas fa-lock"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Enhanced Security</h5>
+                                    <p class="mb-0 text-muted">Multiple layers of protection for your credentials</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center mb-3">
+                                <div class="feature-icon">
+                                    <i class="fas fa-bolt"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Fast Performance</h5>
+                                    <p class="mb-0 text-muted">Optimized algorithms ensuring quick response times</p>
+                                </div>
+                            </li>
+                            <li class="d-flex align-items-center">
+                                <div class="feature-icon">
+                                    <i class="fas fa-code"></i>
+                                </div>
+                                <div>
+                                    <h5 class="mb-0">Developer Friendly</h5>
+                                    <p class="mb-0 text-muted">Easy integration with existing Flask applications</p>
+                                </div>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="col-md-6 mb-4">
+                <div class="card h-100">
+                    <div class="card-body">
+                        <h3 class="card-title mb-4">Advanced Security Features</h3>
+                        
+                        <div class="feature-card">
+                            <h5><i class="fas fa-key me-2 text-primary"></i>Password Protection</h5>
+                            <p class="mb-0">Dual-layer protection using both salt and pepper techniques</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h5><i class="fas fa-shield-alt me-2 text-primary"></i>PBKDF2 with SHA-256</h5>
+                            <p class="mb-0">Industry-standard key derivation function for maximum security</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h5><i class="fas fa-cog me-2 text-primary"></i>High Iteration Count</h5>
+                            <p class="mb-0">Configurable iteration count to protect against brute force attacks</p>
+                        </div>
+                        
+                        <div class="feature-card">
+                            <h5><i class="fas fa-fingerprint me-2 text-primary"></i>Unique User Salts</h5>
+                            <p class="mb-0">Individually generated salt for each account registration</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+        <div class="text-center my-5">
+            <h2 class="mb-4">Ready to get started?</h2>
+            <p class="lead mb-4">Join thousands of developers who trust our authentication system</p>
+            <a href="{{ url_for('register') }}" class="btn btn-primary btn-lg me-2">
+                <i class="fas fa-rocket me-2"></i>Get Started
+            </a>
+            <a href="#" class="btn btn-outline-primary btn-lg">
+                <i class="fas fa-book me-2"></i>Documentation
+            </a>
+        </div>
+    </div>
+    
+    <footer class="footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6">
+                    <h5><i class="fas fa-shield-alt text-primary me-2"></i>SecureLock</h5>
+                    <p>Secure authentication system for Flask applications</p>
+                </div>
+                <div class="col-md-6 text-md-end">
+                    <p>&copy; 2025 SecureLock. All rights reserved.</p>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.1.3/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
