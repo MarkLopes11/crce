@@ -2,7 +2,7 @@ from hashlib import md5, sha1
 import fileinput
 import time
 
-filename='./sample_1kb.txt'
+filename='./sample_10kb.txt'
 
 def format_time(total_time):
     """Formats time in seconds for better readability"""
