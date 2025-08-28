@@ -1,0 +1,119 @@
+2025-08-26 09:44:57,671 - ERROR - Error occurred: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Mark Lopes/nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\share\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\lib\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-08-26 09:45:08,194 - ERROR - Error occurred: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Mark Lopes/nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\share\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\lib\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-08-26 09:46:34,002 - ERROR - Error occurred: 
+**********************************************************************
+  Resource [93mpunkt_tab[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('punkt_tab')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtokenizers/punkt_tab/english/[0m
+
+  Searched in:
+    - 'C:\\Users\\Mark Lopes/nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\share\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\lib\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-08-26 09:47:56,166 - INFO - User input: hi
+2025-08-26 09:48:00,295 - INFO - User input: what can u do
+2025-08-26 09:48:00,299 - ERROR - Error occurred: 
+**********************************************************************
+  Resource [93maveraged_perceptron_tagger_eng[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('averaged_perceptron_tagger_eng')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtaggers/averaged_perceptron_tagger_eng/[0m
+
+  Searched in:
+    - 'C:\\Users\\Mark Lopes/nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\share\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\lib\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
+2025-08-26 09:48:34,989 - INFO - User input: hi
+2025-08-26 09:48:38,700 - INFO - User input: what can u do
+2025-08-26 09:48:38,705 - ERROR - Error occurred: 
+**********************************************************************
+  Resource [93maveraged_perceptron_tagger_eng[0m not found.
+  Please use the NLTK Downloader to obtain the resource:
+
+  [31m>>> import nltk
+  >>> nltk.download('averaged_perceptron_tagger_eng')
+  [0m
+  For more information see: https://www.nltk.org/data.html
+
+  Attempted to load [93mtaggers/averaged_perceptron_tagger_eng/[0m
+
+  Searched in:
+    - 'C:\\Users\\Mark Lopes/nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\share\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\Desktop\\college\\Sem_7\\NLP\\NLP-ISE\\env\\lib\\nltk_data'
+    - 'C:\\Users\\Mark Lopes\\AppData\\Roaming\\nltk_data'
+    - 'C:\\nltk_data'
+    - 'D:\\nltk_data'
+    - 'E:\\nltk_data'
+**********************************************************************
+
