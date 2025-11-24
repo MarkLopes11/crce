@@ -1,0 +1,16 @@
+very	1
+implementing	1
+this	1
+is	1
+nice	1
+speaking	1
+mapreduce	1
+and	1
+of	1
+8	1
+hadoop	2
+hello	2
+exp	1
+lopes	1
+fun	1
+mark	1

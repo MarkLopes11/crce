@@ -1,0 +1,4 @@
+hello hello, this is mark lopes speaking 
+implementing exp 8 of mapreduce 
+hadoop hadoop
+very nice and fun 
